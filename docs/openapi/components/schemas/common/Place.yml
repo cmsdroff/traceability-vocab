@@ -57,11 +57,27 @@ properties:
     $linkedData:
       term: unLocode
       '@id': https://onerecord.iata.org/cargo/Location#code
+  bicFacilityCode:
+    title: BIC Facility Code
+    description: BIC Facility code, used to identify container handling facilities used in supply chains.  (9 letters)
+    type: string
+    $linkedData:
+      term: unLocode
+      '@id': https://vocab.bic-code.org/Facility#unLocode
+  smdgTerminalCode:
+    title: SMDG Terminal Code
+    description: SMDG Terminal code, used to identify terminals used by the ocean carriers for port calls (upto 11 letters)
+    type: string
+    $linkedData:
+      term: unLocode
+      '@id': https://vocab.smdg.org/Terminal#unLocode
 additionalProperties: false
 example: |-
   {
     "type": "Place",
     "globalLocationNumber": "7472903507697",
+    "bicFacilityCode": "GBLIVJMDA",
+    "smdgTerminalCode": "AEAUHADT",
     "geo": {
       "type": "GeoCoordinates",
       "latitude": "68.7083",
